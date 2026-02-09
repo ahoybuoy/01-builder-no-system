@@ -1,0 +1,109 @@
+diff --git a/src/components/Footer.tsx b/src/components/Footer.tsx
+index 23f27e4..2c1abe1 100644
+--- a/src/components/Footer.tsx
++++ b/src/components/Footer.tsx
+@@ -4,7 +4,7 @@ import React from 'react';
+ 
+ export default function Footer() {
+   return (
+-    <footer className="bg-[#111827] py-[48px] px-[24px]">
++    <footer className="bg-[#111827] py-[48px] px-[24px]" role="contentinfo">
+       <div className="max-w-[1200px] mx-auto">
+         <div className="grid grid-cols-4 gap-[32px] mb-[48px]">
+           <div>
+@@ -15,26 +15,32 @@ export default function Footer() {
+           </div>
+           <div>
+             <h4 className="text-[14px] font-semibold text-white mb-[16px]">Product</h4>
+-            <ul className="space-y-[8px]">
+-              <li><a href="#" className="text-[14px] text-[#9ca3af] hover:text-white">Features</a></li>
+-              <li><a href="#" className="text-[14px] text-[#9ca3af] hover:text-white">Pricing</a></li>
+-              <li><a href="#" className="text-[14px] text-[#9ca3af] hover:text-white">Docs</a></li>
+-            </ul>
++            <nav aria-label="Product links">
++              <ul className="space-y-[8px]">
++                <li><a href="#" className="text-[14px] text-[#9ca3af] hover:text-white">Features</a></li>
++                <li><a href="#" className="text-[14px] text-[#9ca3af] hover:text-white">Pricing</a></li>
++                <li><a href="#" className="text-[14px] text-[#9ca3af] hover:text-white">Docs</a></li>
++              </ul>
++            </nav>
+           </div>
+           <div>
+             <h4 className="text-[14px] font-semibold text-white mb-[16px]">Company</h4>
+-            <ul className="space-y-[8px]">
+-              <li><a href="#" className="text-[14px] text-[#9ca3af] hover:text-white">About</a></li>
+-              <li><a href="#" className="text-[14px] text-[#9ca3af] hover:text-white">Blog</a></li>
+-              <li><a href="#" className="text-[14px] text-[#9ca3af] hover:text-white">Careers</a></li>
+-            </ul>
++            <nav aria-label="Company links">
++              <ul className="space-y-[8px]">
++                <li><a href="#" className="text-[14px] text-[#9ca3af] hover:text-white">About</a></li>
++                <li><a href="#" className="text-[14px] text-[#9ca3af] hover:text-white">Blog</a></li>
++                <li><a href="#" className="text-[14px] text-[#9ca3af] hover:text-white">Careers</a></li>
++              </ul>
++            </nav>
+           </div>
+           <div>
+             <h4 className="text-[14px] font-semibold text-white mb-[16px]">Legal</h4>
+-            <ul className="space-y-[8px]">
+-              <li><a href="#" className="text-[14px] text-[#9ca3af] hover:text-white">Privacy</a></li>
+-              <li><a href="#" className="text-[14px] text-[#9ca3af] hover:text-white">Terms</a></li>
+-            </ul>
++            <nav aria-label="Legal links">
++              <ul className="space-y-[8px]">
++                <li><a href="#" className="text-[14px] text-[#9ca3af] hover:text-white">Privacy</a></li>
++                <li><a href="#" className="text-[14px] text-[#9ca3af] hover:text-white">Terms</a></li>
++              </ul>
++            </nav>
+           </div>
+         </div>
+         <div className="border-t border-[#374151] pt-[24px] text-center">
+diff --git a/src/components/Header.tsx b/src/components/Header.tsx
+index c28fc54..a9f89a0 100644
+--- a/src/components/Header.tsx
++++ b/src/components/Header.tsx
+@@ -15,27 +15,30 @@ export default function Header() {
+       <div style={{ fontSize: '24px', fontWeight: 'bold', color: '#1f2937' }}>
+         StartupCo
+       </div>
+-      <nav style={{ display: 'flex', gap: '32px' }}>
+-        <a href="#features" style={{ color: '#4b5563', textDecoration: 'none', fontSize: '16px' }}>
++      <nav aria-label="Main navigation" style={{ display: 'flex', gap: '32px' }}>
++        <a href="#features" aria-label="View features" style={{ color: '#4b5563', textDecoration: 'none', fontSize: '16px' }}>
+           Features
+         </a>
+-        <a href="#pricing" style={{ color: '#4b5563', textDecoration: 'none', fontSize: '16px' }}>
++        <a href="#pricing" aria-label="View pricing plans" style={{ color: '#4b5563', textDecoration: 'none', fontSize: '16px' }}>
+           Pricing
+         </a>
+-        <a href="#about" style={{ color: '#4b5563', textDecoration: 'none', fontSize: '16px' }}>
++        <a href="#about" aria-label="Learn about us" style={{ color: '#4b5563', textDecoration: 'none', fontSize: '16px' }}>
+           About
+         </a>
+       </nav>
+-      <button style={{
+-        backgroundColor: '#3B82F6',
+-        color: 'white',
+-        padding: '8px 16px',
+-        borderRadius: '8px',
+-        border: 'none',
+-        cursor: 'pointer',
+-        fontSize: '14px',
+-        fontWeight: '500'
+-      }}>
++      <button
++        aria-label="Get started with StartupCo"
++        style={{
++          backgroundColor: '#3B82F6',
++          color: 'white',
++          padding: '8px 16px',
++          borderRadius: '8px',
++          border: 'none',
++          cursor: 'pointer',
++          fontSize: '14px',
++          fontWeight: '500'
++        }}
++      >
+         Get Started
+       </button>
+     </header>
