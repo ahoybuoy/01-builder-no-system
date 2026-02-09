@@ -16,8 +16,18 @@ export default function PricingCard({ name, price, features, highlighted }: Pric
       padding: '32px',
       borderRadius: '12px',
       border: highlighted ? 'none' : '1px solid #e5e7eb',
-      textAlign: 'center'
-    }}>
+      textAlign: 'center',
+      transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+    }}
+    onMouseEnter={(e) => {
+      e.currentTarget.style.transform = 'scale(1.03)';
+      e.currentTarget.style.boxShadow = '0 20px 40px rgba(0, 0, 0, 0.12)';
+    }}
+    onMouseLeave={(e) => {
+      e.currentTarget.style.transform = 'scale(1)';
+      e.currentTarget.style.boxShadow = 'none';
+    }}
+    >
       <h3 style={{
         fontSize: '20px',
         fontWeight: '600',
@@ -64,7 +74,8 @@ export default function PricingCard({ name, price, features, highlighted }: Pric
         border: 'none',
         cursor: 'pointer',
         fontSize: '16px',
-        fontWeight: '500'
+        fontWeight: '500',
+        transition: 'background-color 0.2s ease',
       }}>
         Get Started
       </button>
