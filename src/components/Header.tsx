@@ -15,27 +15,30 @@ export default function Header() {
       <div style={{ fontSize: '24px', fontWeight: 'bold', color: '#1f2937' }}>
         StartupCo
       </div>
-      <nav style={{ display: 'flex', gap: '32px' }}>
-        <a href="#features" style={{ color: '#4b5563', textDecoration: 'none', fontSize: '16px' }}>
+      <nav aria-label="Main navigation" style={{ display: 'flex', gap: '32px' }}>
+        <a href="#features" aria-label="View features" style={{ color: '#4b5563', textDecoration: 'none', fontSize: '16px' }}>
           Features
         </a>
-        <a href="#pricing" style={{ color: '#4b5563', textDecoration: 'none', fontSize: '16px' }}>
+        <a href="#pricing" aria-label="View pricing plans" style={{ color: '#4b5563', textDecoration: 'none', fontSize: '16px' }}>
           Pricing
         </a>
-        <a href="#about" style={{ color: '#4b5563', textDecoration: 'none', fontSize: '16px' }}>
+        <a href="#about" aria-label="Learn about us" style={{ color: '#4b5563', textDecoration: 'none', fontSize: '16px' }}>
           About
         </a>
       </nav>
-      <button style={{
-        backgroundColor: '#3B82F6',
-        color: 'white',
-        padding: '8px 16px',
-        borderRadius: '8px',
-        border: 'none',
-        cursor: 'pointer',
-        fontSize: '14px',
-        fontWeight: '500'
-      }}>
+      <button
+        aria-label="Get started with StartupCo"
+        style={{
+          backgroundColor: '#3B82F6',
+          color: 'white',
+          padding: '8px 16px',
+          borderRadius: '8px',
+          border: 'none',
+          cursor: 'pointer',
+          fontSize: '14px',
+          fontWeight: '500'
+        }}
+      >
         Get Started
       </button>
     </header>
