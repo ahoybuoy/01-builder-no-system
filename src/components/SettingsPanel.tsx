@@ -79,3 +79,4 @@ export function SettingsPanel() {
     </div>
   );
 }
+// Rescan: 2026-02-15T23:40:10Z
